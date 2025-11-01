@@ -1,0 +1,26 @@
+{
+  "api": {
+    "base_url": "https://fapi.binance.com",
+    "endpoint": "/fapi/v1/continuousKlines",
+    "timeout": 30,
+    "rate_limit_delay": 0.5
+  },
+  "trading": {
+    "pairs": ["BTCUSDT", "ETHUSDT", "SOLUSDT"],
+    "contract_type": "PERPETUAL",
+    "intervals": ["15m", "1h", "4h"]
+  },
+  "time_range": {
+    "start_year": 2020,
+    "start_month": 1,
+    "start_day": 1,
+    "use_current_time_as_end": true
+  },
+  "data": {
+    "output_directory": "klines_data",
+    "save_csv": true,
+    "save_json": true,
+    "max_records_per_request": 1500
+  }
+}
+

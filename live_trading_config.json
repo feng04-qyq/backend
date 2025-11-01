@@ -1,0 +1,72 @@
+{
+  "_comment": "Bybit实盘交易系统配置文件",
+  "_warning": "⚠️ 请妥善保管API密钥，不要泄露给他人",
+  
+  "bybit_api_key": "QrWifZlOorEiJ6qqAd",
+  "bybit_api_secret": "9TSAc2sQOq2xKJ4AJ8Rn5eDu66LZg7vJXvQT",
+  
+  "_environment_info": "环境选择（三选一）",
+  "use_testnet": false,
+  "use_demo": true,
+  "_env_note": "testnet=测试网 | demo=主网模拟盘 | 都为false=主网实盘",
+  
+  "_symbols_info": "监控和交易的资产列表",
+  "symbols": [
+    "BTCUSDT_PERPETUAL",
+    "ETHUSDT_PERPETUAL",
+    "SOLUSDT_PERPETUAL"
+  ],
+  
+  "_deepseek_config_info": "DeepSeek AI配置文件路径",
+  "deepseek_config": "deepseek_config.json",
+  
+  "_use_enhanced_indicators_info": "是否使用增强版技术指标（SuperTrend/Ichimoku/ADX/StochRSI/AO/Pivot/OBV/VWAP/EMA云带）",
+  "use_enhanced_indicators": true,
+  "_indicators_note": "true=使用回测系统的丰富指标 | false=仅使用基础指标(RSI/MACD/EMA)",
+  
+  "_leverage_info": "默认杠杆（AI可选1-15倍）",
+  "default_leverage": 10,
+  
+  "_trading_interval_info": "交易决策间隔（秒），每3分钟询问一次AI",
+  "trading_interval": 180,
+  
+  "_max_position_pct_info": "最大仓位比例（0.0-0.3，即0-30%）",
+  "max_position_pct": 0.30,
+  
+  "_min_position_pct_info": "最小仓位比例（避免订单过小），建议≥3%",
+  "min_position_pct": 0.03,
+  
+  "_max_leverage_info": "最大杠杆倍数（强制限制，防止AI错误输出）",
+  "max_leverage": 15,
+  "_leverage_note": "即使AI返回更高杠杆，也会被限制在此范围内",
+  
+  "_min_balance_info": "最小余额保护（USDT）",
+  "min_balance": 10.0,
+  
+  "_limit_order_timeout_info": "限价单超时时间（秒），默认300秒（5分钟）",
+  "limit_order_timeout": 300,
+  
+  "_position_hold_time_min_info": "持仓保护期已禁用 - AI完全自主决策",
+  "position_hold_time_min": 0,
+  "_hold_time_note": "⚠️ 已移除持仓保护限制，AI可随时平仓，完全自主决策",
+  
+  "_trailing_stop_info": "移动止损配置",
+  "use_trailing_stop": true,
+  "_trailing_stop_note": "当价格向有利方向移动时，自动调整止损位锁定利润",
+  "trailing_stop_distance_atr_multiplier": 1.5,
+  "_distance_note": "移动止损距离 = ATR × 1.5",
+  "trailing_stop_trigger_atr_multiplier": 1.0,
+  "_trigger_note": "当价格向有利方向移动超过1个ATR时开始移动止损",
+  "trailing_stop_check_interval": 60,
+  "_check_interval_note": "检查移动止损的时间间隔（秒），建议30-120秒",
+  
+  "_risk_control": {
+    "description": "风险控制参数",
+    "max_position": "30%",
+    "stop_loss": "AI自主决策",
+    "extreme_protection": "已启用（5种机制）",
+    "position_protection": "❌ 已禁用（AI完全自主）",
+    "trailing_stop": "已启用（自动锁定利润）"
+  }
+}
+

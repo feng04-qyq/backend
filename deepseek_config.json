@@ -1,0 +1,15 @@
+{
+  "deepseek_api_key": "sk-77d074c42dd6446b8659799a011be752",
+  "deepseek_base_url": "https://api.deepseek.com/v1",
+  "model": "deepseek-chat",
+  "initial_capital": 100,
+  "leverage": 15,
+  "trading_fee": 0.0006,
+  "max_position_size": 0.95,
+  "temperature": 0.6,
+  "max_tokens": 1000,
+  "cache_ttl_samples": 5,
+  "enable_cache": true,
+  "max_cache_size": 1000
+}
+
