@@ -2,8 +2,8 @@
   "_comment": "Bybit实盘交易系统配置文件",
   "_warning": "⚠️ 请妥善保管API密钥，不要泄露给他人",
   
-  "bybit_api_key": "QrWifZlOorEiJ6qqAd",
-  "bybit_api_secret": "9TSAc2sQOq2xKJ4AJ8Rn5eDu66LZg7vJXvQT",
+  "bybit_api_key": "",
+  "bybit_api_secret": "",
   
   "_environment_info": "环境选择（三选一）",
   "use_testnet": false,
